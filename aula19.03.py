@@ -61,6 +61,15 @@ lista[1:1]=['b','c']
 print(lista)
 lista[4:4]=['e']
 print(lista)
+print('\n \n')
 
 
-#
+#removendo itens
+
+a=['a','b','c']
+del a[1]
+print(a)
+lista=['a','b','c','d','e','f']
+del lista[1:5]
+print(lista)
+print("\n \n")
