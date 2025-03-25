@@ -32,3 +32,11 @@ a=[88,88,99,99,100,100]
 print(a)
 print(a.count(88))
 print("\n \n")
+
+#.pop exclui o ultimo item da minha lista, ou o item da minha escolha
+a=[1,2,3,4,5,6]
+a.pop()
+print(a)
+
+a.pop(2)
+print(a)
