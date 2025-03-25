@@ -1,0 +1,27 @@
+#aula 24.063
+
+#inserindo elementos ".append"
+
+a= [81,82,83]
+a .append(5)
+print (a)
+print("\n \n")
+
+#ordenando os elementos da lista com ".sort" se usado .reverse é o oposto do .sort, do maior para o menor
+
+a=[81,88,85,84]
+a.sort()
+print(a)
+print("\n \n")
+
+#.index, usado para localizar algo na sua lista, lembrando que os itens da lista começa com "0"
+
+a=[1,2,3,4,5,6]
+print(a.index(3))
+print("\n \n")
+
+#.insert, usado para inserir itens na sua lista
+a=[88,10,66,44]
+a.insert(1,100)
+print(a)
+print("\n \n")
