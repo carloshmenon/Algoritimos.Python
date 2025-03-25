@@ -25,3 +25,10 @@ a=[88,10,66,44]
 a.insert(1,100)
 print(a)
 print("\n \n")
+
+#.count usado para contar quantas vezes o item desejado aparece na sua lista
+
+a=[88,88,99,99,100,100]
+print(a)
+print(a.count(88))
+print("\n \n")
