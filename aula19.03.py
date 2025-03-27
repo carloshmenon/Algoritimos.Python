@@ -8,7 +8,7 @@ print(["teste"]*4)
 print([1,2,["ola, mundo"]*2], "\n")
 print("\n \n")
 
-#lista usando "max"  "min" "sun"
+#lista usando "max"  "min" "sum"
 
 a=[1,2,3,4,5,6,7,8,9]
 print(a)
