@@ -37,6 +37,14 @@ print("\n \n")
 a=[1,2,3,4,5,6]
 a.pop()
 print(a)
+print("\n")
 
 a.pop(2)
 print(a)
+print("\n \n")
+
+# .extend adiciona itens no final da sua lista 
+
+a=[1,2,3]
+a.extend([4,5])
+print (a)
