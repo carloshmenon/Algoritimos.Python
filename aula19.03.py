@@ -45,7 +45,7 @@ print('\n \n')
 
 #removendo itens de uma lista
 
-lista=['a','b','c','d','e']
+lista=['a','b','c','d','e','h']
 print(lista)
 print(len(lista))
 
