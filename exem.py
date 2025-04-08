@@ -14,5 +14,5 @@ if auton_reser<2:
     print("Consumo moderado")
 elif auton_reser>=2 and auton_reser:
     print("Consumo elevado")
-else auton_reser>:
-            print("\n Consumo Baixo")
+else:
+    print("\n Consumo Baixo")
