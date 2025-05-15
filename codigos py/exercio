@@ -1,6 +1,0 @@
-#exercicios 4.1
-
-a=float(input("digite o valor de a:" ))
-b=float(input("digite o valor de b:" ))
-c=float(input("digite o valor de c:" ))
-print((a+b+c)*c)
