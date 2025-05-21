@@ -1,0 +1,54 @@
+#exercicios 4.1 soma de a,b,c multipicado por c
+
+a=float(input("digite o valor de a:" ))
+b=float(input("digite o valor de b:" ))
+c=float(input("digite o valor de c:" ))
+print((a+b+c)*c)
+
+
+#metros para centimetros
+
+metros=float(input("digite o total de metros: "))
+m=metros*100
+print(m)
+
+#media do aluno
+#usar float para realizar calculos 
+
+nome = (input("Digite o nome do aluno:  "))
+idade= (input("digite a idade: "))
+sexo= (input("digite o sexo: "))
+Nota1= float(input("digite a primeira nota: "))
+nota2=float(input("digite a segunda nota: "))
+
+N=(Nota1+nota2) /2
+print(N)
+
+#empresa umbrella
+
+nome=(input("digite seu nome: "))
+CPF=(input("digite seu CPF: "))
+RG=(input("digite seu RG: "))
+nascimento=(input("data de nascimento: "))
+sexo=(input("digite seu sexo: "))
+peso= float(input("digite seu peso: "))
+tipo_sanguineo=(input("digite seu tipo sanguineo:"))
+renda=float(input("digite sua renda: "))
+endereco=(input("digite seu endereço: "))
+telefone=(input("digite seu telefone: "))
+cidade=(input("digite sua cidade: "))
+estado=(input("digite seu estado: "))
+
+print("\n----relatorio de cadastro do paciente----")
+print("nome: {nome}")
+print("CPF: {CPF}")
+print("RG: {RG}")
+print("data de nascimento: {nascimento}")
+print("sexo: {sexo}")
+print("peso: {peso}")
+print("tipo sanguineo: {tipo_sanguineo}")
+print("renda: {renda}")
+print("endereço: {endereco}")
+print("telefone: {telefone}")
+print("cidade: {cidade} ")
+print("estado: {estado}")
