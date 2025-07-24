@@ -2,9 +2,6 @@
 //printar strings %f 
 //printar double %f 
 //println serve para ja quebrar linha LN= print line.
-
-
-import java.util.Scanner;
 public class prints
 {
 	public static void main(String[] args) {

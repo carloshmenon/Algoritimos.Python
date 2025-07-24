@@ -3,8 +3,6 @@
 //printar double %f 
 //println serve para ja quebrar linha LN= print line.
 
-
-import java.util.Scanner;
 public class porcentagem
 
 

@@ -2,7 +2,6 @@
 //no caso aqui a ordem das porcetagens esta dando print por ondem, comencando pelo nome 
 
 
-import java.util.Scanner;
 public class porcetagem2
 {
 	public static void main(String[] args) {
