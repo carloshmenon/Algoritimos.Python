@@ -1,0 +1,72 @@
+[
+    {
+        "codigo": "001",
+        "nome": "Cimento Votoran 50kg",
+        "estoque": 120,
+        "preco": 35.0,
+        "estoque_minimo": 20
+    },
+    {
+        "codigo": "002",
+        "nome": "Areia M\u00e9dia Lavada 1m\u00b3",
+        "estoque": 25,
+        "preco": 110.0,
+        "estoque_minimo": 5
+    },
+    {
+        "codigo": "003",
+        "nome": "Brita 1 1m\u00b3",
+        "estoque": 20,
+        "preco": 90.0,
+        "estoque_minimo": 5
+    },
+    {
+        "codigo": "004",
+        "nome": "Bloco de Concreto 39x19x14cm",
+        "estoque": 800,
+        "preco": 3.0,
+        "estoque_minimo": 100
+    },
+    {
+        "codigo": "005",
+        "nome": "Tinta Suvinil 18L branca",
+        "estoque": 35,
+        "preco": 220.0,
+        "estoque_minimo": 10
+    },
+    {
+        "codigo": "006",
+        "nome": "Rejunte Quartzolit 1kg",
+        "estoque": 140,
+        "preco": 9.5,
+        "estoque_minimo": 30
+    },
+    {
+        "codigo": "007",
+        "nome": "Tubo PVC 100mm - 6m",
+        "estoque": 50,
+        "preco": 78.0,
+        "estoque_minimo": 10
+    },
+    {
+        "codigo": "008",
+        "nome": "Caixa d\u2019\u00e1gua 500L Fortlev",
+        "estoque": 18,
+        "preco": 280.0,
+        "estoque_minimo": 5
+    },
+    {
+        "codigo": "009",
+        "nome": "Telha fibrocimento 2,44m",
+        "estoque": 60,
+        "preco": 72.0,
+        "estoque_minimo": 15
+    },
+    {
+        "codigo": "010",
+        "nome": "Piso cer\u00e2mico 45x45 (cx)",
+        "estoque": 70,
+        "preco": 55.0,
+        "estoque_minimo": 20
+    }
+]

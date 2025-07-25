@@ -1,0 +1,26 @@
+[
+    {
+        "nome": "Jo\u00e3o Ribeiro",
+        "usuario": "joao.vendas",
+        "senha": "123",
+        "setor": "vendas"
+    },
+    {
+        "nome": "Carla Menezes",
+        "usuario": "carla.vendas",
+        "senha": "123",
+        "setor": "vendas"
+    },
+    {
+        "nome": "Lucas Ferreira",
+        "usuario": "lucas.caixa",
+        "senha": "123",
+        "setor": "caixa"
+    },
+    {
+        "nome": "Renata Silva",
+        "usuario": "renata.estoque",
+        "senha": "123",
+        "setor": "estoque"
+    }
+]
