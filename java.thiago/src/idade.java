@@ -8,10 +8,11 @@ public class idade {
     public static void main(String[] args) {
         //declarar o scanner dentro da main
 
-        int num = 0 ;
+        int num;
         Scanner scan = new Scanner (System.in);
         System.out.println("digite sua idade : ");
         num=scan.nextInt();
+        scan.close();
 
         if(num >=18){
             System.out.println("Maior!!");

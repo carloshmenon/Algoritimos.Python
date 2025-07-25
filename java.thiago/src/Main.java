@@ -15,6 +15,7 @@ public class Main
 	    Scanner sc = new Scanner(System.in);
 	    System.out.println("digite um numero: ");
 	    int number =sc.nextInt();
+		sc.close();
 	    System.out.println("o numero digitado foi : " +number );
 
 		sc.close();
