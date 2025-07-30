@@ -1,4 +1,4 @@
-package aula3007;
+package aula_30_07;
 
 public class vetor {
     public static void main(String[] args) {
