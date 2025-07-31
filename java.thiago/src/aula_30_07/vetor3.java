@@ -3,7 +3,7 @@ package aula_30_07;
 public class vetor3 {
     public static void main(String[] args) {
 
-        int tamanho = 5;
+        int tamanho = 5; 
         int [] vetor = new int[tamanho];
 
         vetor[0] =21;     
