@@ -2,5 +2,4 @@
 // com a metade do segundo, a soma do triplo do primeiro com o terceiro. O terceiro número
 // digitado ao cubo
 
-package atv_1;
 
