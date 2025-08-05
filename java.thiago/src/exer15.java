@@ -3,9 +3,21 @@
 // do seu salário líquido.
 
 
-
+import java.util.Scanner;
 public class exer15 {
     public static void main(String[] args) {
-        
+        double horas,salariobruto, salarioliquido ;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("digite quantas horas trabalhadas");
+        horas=scan.nextInt();
+
+        salariobruto=((horas*40.5));
+
+        if (salariobruto>2500){
+            salarioliquido=salariobruto-(salariobruto*0.11);
+            System.out.println("Seu salario liquido desse mes foi "+ salarioliquido);
+        }else{
+            System.out.println("seu salario liquido foi : "+ salariobruto);
+        }
     }
 }
