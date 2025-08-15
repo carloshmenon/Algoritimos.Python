@@ -1,9 +1,7 @@
-package aula_15_08;
+package lista2.thiago;
 
-public class matriz {
+public class exer1 {
     public static void main(String[] args) {
         
     }
-        
-    }
-
+}
