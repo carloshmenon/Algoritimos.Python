@@ -1,4 +1,4 @@
-package aula_15_08;
+package matriz;
 
 public class matriz {
     public static void main(String[] args) {
