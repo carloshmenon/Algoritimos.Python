@@ -31,7 +31,7 @@ public class matriz2 {
             System.out.printf("%d linha: ", (i+1));//print coloca as linhas da matriz
             for (j=0; j<m[i].length;j++){//esse lenght contas quantos itens temos dentro de cada i, no caso da linha 0 ele conta quantos itens temos na linha 0
                 System.out.printf("%d", m[i][j]);// aqui printamos os itens contados
-
+                
             }
             System.out.println("\n");
         }
