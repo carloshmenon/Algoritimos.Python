@@ -14,7 +14,7 @@ public class exermatriz2 {
         matriz[1][1]=5;
         matriz[1][2]=6;
 
-        matriz[2][2]=7;
+        matriz[2][0]=7;
         matriz[2][1]=8;
         matriz[2][2]=9;
 
