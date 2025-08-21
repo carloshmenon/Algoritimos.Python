@@ -1,6 +1,6 @@
-package exer.matriz;
+package exermatriz;
 
-public class exer1 {
+public class exermatriz1 {
     public static void main(String[] args) {
         
         int matriz[][]= new int [3][3];
@@ -29,7 +29,9 @@ public class exer1 {
                 System.out.printf("%d", matriz[i][j]);
 
             }
-        }   System.out.println("\n");
+            System.out.println("\n");
+        
+        } 
         
         
 
