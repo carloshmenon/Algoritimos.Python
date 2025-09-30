@@ -18,3 +18,5 @@ y= r2.calcula_area()#aqui defini que o x calcula o retangulo r2
 
 print("AREA: ", x)#aqui mostro o resultado
 print("AREA: ", x)#aqui mostro o resultado
+
+

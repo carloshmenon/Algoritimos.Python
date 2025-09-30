@@ -1,6 +1,6 @@
 #herança
 
-class Pessoa: #Super class
+class Pessoa: #Super class 
     def __init__(self, nome, email, senha ):
         self.name = nome
         self.mail = email
