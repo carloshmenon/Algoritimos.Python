@@ -43,6 +43,32 @@ class Database:
         finally:
             self.close_connection()
 
+    def select_by_id (self,id):
+        self.connect()
+        try:
+            self.cursor.execute (f"SELECT*FROM cliente WHERE id_cli = {id}")
+            result =self.cursor.fatchone()
+            return result
+
+
+        except Exception as err:
+            print(err)
+
+        finally:
+            self.close_connection()
+
+    def update(self):
+        self.connect()
+        tupla= (2,"yann")
+        try :
+            self.cursor.execute(f"""UPDATE cliente SET nome= '{tupla[1]}' WHERE id_cli = {tupla[0]}""")
+            self.conn.commit()
+            return True
+        except Exception as err:
+            print (err)
+
+        finally:
+            self.close_connection()
 
     def delete(self,id_cli):
         self.connect()
@@ -76,7 +102,14 @@ if cadastro == True:
 if delete == True:
     print("deletado com sucesso")
 
-for cliente in dados:
-    print (f"id : {cliente[0]} | nome: {cliente[1]} | fone : {cliente[2]} | cidade : {cliente[3]}")
+db=Database()
+dados=db.select()
 
+for cliente in dados:
+    print (f"id : {cliente[0]} | nome: {cliente[1]} | CPF : {cliente[2]} | fone : {cliente[3]} | cidade {cliente[4]}")
+
+db=Database ()
+dados= db.select_by_id(2)
+
+print (dados)
 
