@@ -113,3 +113,15 @@ dados= db.select_by_id(2)
 
 print (dados)
 
+data=Database()
+data.connect()
+dados_user=("fabio2","34343444","67984818181","cg")
+
+resultado=data.insert (dados_user)
+
+if resultado==True:
+    print("cadastrado com sucesso!!")
+
+result= data.select
+for cliente in result:
+    print(cliente)
