@@ -90,38 +90,6 @@ class Database:
             self.conn.close()
             print("conexao encerrada com sucesso!!")
 
-db = Database()
-db.connect()
-dados= ("gersooooo","123","456","campo grande")
-cadastro= db.insert(dados)
-delete= db.delete(5)#aqui deletamos o cliente id 5
-
-if cadastro == True:
-    print("Cadastro com sucesso!!")
-
-if delete == True:
-    print("deletado com sucesso")
-
-db=Database()
-dados=db.select()
-
-for cliente in dados:
-    print (f"id : {cliente[0]} | nome: {cliente[1]} | CPF : {cliente[2]} | fone : {cliente[3]} | cidade {cliente[4]}")
-
-db=Database ()
-dados= db.select_by_id(2)
-
-print (dados)
-
-data=Database()
-data.connect()
-dados_user=("fabio2","34343444","67984818181","cg")
-
-resultado=data.insert (dados_user)
-
-if resultado==True:
-    print("cadastrado com sucesso!!")
-
-result= data.select
-for cliente in result:
-    print(cliente)
+if __name__=="__main__":
+    db = Database()
+    db.connect()
