@@ -1,0 +1,22 @@
+
+class pessoa:
+    def __init__(self, nome, idade, endereco):
+        self.nome=nome
+        self.idade=idade
+        self.endereco=endereco
+
+    def end(self):
+        print(f"seu endereço é o {self.endereco}")
+
+    def novo_end(self):
+        self.endereco=input("digite qual seu novo endereço: ")
+        return self.endereco
+        
+        
+a1=pessoa("carlos", 27,"senac")
+
+a1.end()
+
+x=a1.novo_end()
+print(x)
+
