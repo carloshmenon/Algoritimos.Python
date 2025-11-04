@@ -17,20 +17,29 @@ class Cliente:
     
     def buscar(self):
         self.db = Database()
-        dados=self.db.select
+        dados=self.db.select()
         return dados
+    
+    def buscar_por_id(self, id):
+        self.db = Database()
+        clientes=self.db.select_by_id(id)
+        return clientes
     
     def deletar(self,id):
         self.db=Database()
         deletee=self.db.delete(id)
         return deletee
         
-deletee= Cliente()
+cli= Cliente()
 
+##excluindo 
+# id_excluir= input("digite o nome do cliente que gostaria de deletar: ")
+# retorno= cli.deletar(id_excluir)
 
-id= input("digite o nome do cliente que gostaria de deletar: ")
+# if retorno== True:
+#     print("cliente excluido com sucessoooo")
 
-delet= deletee.deletar(id)
+# #cadastrando
 
 # cli=Cliente()
 # cli.nome= input("Digite seu nome: ")
@@ -43,5 +52,19 @@ delet= deletee.deletar(id)
 # clientes=cli.buscar()
 # print(clientes)
 
+clientes = cli.buscar()
 
-        
+for item in clientes:
+    print(item)
+
+id_atualizar= int(input("qual id deseja atualizar? "))
+cli_att= cli.buscar_por_id(id_atualizar)
+print(cli_att) 
+
+cli_att=list(cli_att)
+cli_att[1]=input("digite o novo nome: ")
+cli_att[2]=int (input("digite o novo cpf: "))
+cli_att[3]=input("digite o novo fone: ")
+cli_att[4]=input("digite o novo cidade: ")
+
+print(cli_att)

@@ -46,8 +46,8 @@ class Database:
     def select_by_id (self,id):
         self.connect()
         try:
-            self.cursor.execute (f"SELECT*FROM cliente WHERE id_cli = {id}")
-            result =self.cursor.fatchone()
+            self.cursor.execute (f"SELECT*FROM cliente WHERE id_cli = %s ", (id))
+            result =self.cursor.fetchone()
             return result
 
 
