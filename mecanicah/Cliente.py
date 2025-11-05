@@ -1,4 +1,4 @@
-from Datebase import Database
+from mecanicah.Database import Database
 
 
 class Cliente:
