@@ -1,4 +1,4 @@
-from mecanicah.Database import Database
+from Database import Database
 
 
 class Cliente:
@@ -63,7 +63,7 @@ print(cli_att)
 
 cli_att=list(cli_att)
 cli_att[1]=input("digite o novo nome: ")
-cli_att[2]=int (input("digite o novo cpf: "))
+cli_att[2]=input("digite o novo cpf: ")
 cli_att[3]=input("digite o novo fone: ")
 cli_att[4]=input("digite o novo cidade: ")
 
