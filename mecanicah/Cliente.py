@@ -25,6 +25,11 @@ class Cliente:
         clientes=self.db.select_by_id(id)
         return clientes
     
+    def atualizar (self, tupla):
+        self.db = Database()
+        cliente=self.db.update(tupla)
+        return cliente
+    
     def deletar(self,id):
         self.db=Database()
         deletee=self.db.delete(id)
@@ -52,19 +57,19 @@ cli= Cliente()
 # clientes=cli.buscar()
 # print(clientes)
 
-clientes = cli.buscar()
+# clientes = cli.buscar()
 
-for item in clientes:
-    print(item)
+# for item in clientes:
+#     print(item)
 
-id_atualizar= int(input("qual id deseja atualizar? "))
-cli_att= cli.buscar_por_id(id_atualizar)
-print(cli_att) 
+# id_atualizar= int(input("qual id deseja atualizar? "))
+# cli_att= cli.buscar_por_id(id_atualizar)
+# print(cli_att) 
 
-cli_att=list(cli_att)
-cli_att[1]=input("digite o novo nome: ")
-cli_att[2]=input("digite o novo cpf: ")
-cli_att[3]=input("digite o novo fone: ")
-cli_att[4]=input("digite o novo cidade: ")
+# cli_att=list(cli_att)
+# cli_att[1]=input("digite o novo nome: ")
+# cli_att[2]=input("digite o novo cpf: ")
+# cli_att[3]=input("digite o novo fone: ")
+# cli_att[4]=input("digite o novo cidade: ")
 
-print(cli_att)
+# print(cli_att)

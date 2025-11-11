@@ -57,11 +57,17 @@ class Database:
         finally:
             self.close_connection()
 
-    def update(self):
+    def update(self, tupla):
         self.connect()
-        tupla= (2,"yann")
         try :
-            self.cursor.execute(f"""UPDATE cliente SET nome= '{tupla[1]}' WHERE id_cli = {tupla[0]}""")
+            self.cursor.execute(f"""
+            UPDATE cliente
+            SET nome = '{tupla[1]}',
+                CPF = '{tupla[2]}',
+                fone = '{tupla[3]}',
+                cidade = '{tupla[4]}'
+            WHERE id_cli = '{tupla[0]}'
+        """)
             self.conn.commit()
             return True
         except Exception as err:
