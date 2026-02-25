@@ -1,0 +1,57 @@
+<form action="/action_page.php">
+    <label for="fname">primeiroNome</label><br> 
+        <input type="text" id="fname" name="fname" value="ederson"><br>
+    <label for="lname">UltimoNome:</label><br>  
+        <input type="text" id="lname" name="lname" value="consta"><br><br>
+    <input type="submit" value="Enviar">
+</form>
+<!--aqui colocamos um input de nome e sobrenome-->
+
+<p>Qual sua linguagem preferida?</p>
+<form action="page.php">
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+<!--aqui colocamos um input de linguagem preferida-->
+
+<form action="page.php">
+    <input type="checkbox" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="checkbox" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+
+    <input type="checkbox" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+<!--aqui colocamos um input de linguagem preferida, mas com checkbox, ou seja, pode escolher mais de uma opção, o recebe a informacao como um vetor, que é igual a lista em .py-->
+
+<forms>
+    <fieldser id="email">
+        <legend>E-mail</legend>
+        <P>email<input type="email" name="email" size="20" maxlength="30" 
+        placeholder="exemplo@exemplo.com"></P>
+        
+    </fieldser>
+</forms>
+<!--aqui colocamos um input de email, com o tipo email, que ja tem uma validacao para verificar se o email é valido, e com um placeholder, 
+que é um texto que aparece dentro do input, para dar uma dica do que deve ser digitado-->
+
+<forms>
+    <fieldser id="senha">
+        <legend>Senha</legend>
+        <P>senha<input type="password" name="Senha" id="campos" size="20" maxlength="10" 
+        placeholder="abc@123"></P>
+        <input type="submit">
+    </fieldser>
+</forms>
+<!--aqui colocamos um input de senha, com o tipo password, que faz com que os caracteres digitados sejam ocultados, e com um placeholder,
+ que é um texto que aparece dentro do input, para dar uma dica do que deve ser digitado
