@@ -61,6 +61,58 @@
     <label for="inteligencia artificial">Inteligência Artificial</label><br>
     
 
+        
+        <fieldset>
+            <legend>5. Experiência Profissional</legend>
+            <div class="campo">
+                <label>Empresa Atual:</label>
+                <input type="text" name="empresa">
+            </div>
+            <div class="campo">
+                <label>Cargo:</label>
+                <input type="text" name="cargo">
+            </div>
+            <div class="campo">
+                <label>Tempo de Experiência:</label>
+                <input type="number" name="tempo" style="width: 50px;"> anos
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6. Habilidades Técnicas</legend>
+            <label>Linguagens:</label>
+            <input type="checkbox" name="ling[]" value="PHP"> PHP<br>
+            <input type="checkbox" name="ling[]" value="Python"> Python<br>
+            <input type="checkbox" name="ling[]" value="Java"> Java<br>
+            <input type="checkbox" name="ling[]" value="JavaScript"> JavaScript
+        </fieldset>
+
+        <fieldset>
+            <legend>7. Upload de Documentos</legend>
+            <div class="campo">
+                <label>Currículo:</label>
+                <input type="file" name="curriculo">
+            </div>
+            <div class="campo">
+                <label>Histórico Escolar:</label>
+                <input type="file" name="historico">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>8. Observações Finais</legend>
+            <div class="campo">
+                <label>Comentários:</label>
+                <textarea name="comentarios"></textarea>
+            </div>
+            <div class="campo">
+                <label>Aceito os termos:</label>
+                <input type="checkbox" name="termos" required> Concordo com os termos
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar Cadastro Completo</button>
+
 
 </form>
 
