@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* O valor que você usa é este */
+}
+
+
+.Header{
+    margin-bottom: 20px;
+    height: 100px;
+    width: 1000px;
+    border-color: black;
+    border-style: solid;
+    border-width: 10px;
+    box-shadow: 20px 15px 10px rgb(1, 2, 3,0.2);
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+}
+
+ul {
+    display: flex;            /* Coloca os itens um ao lado do outro */
+    list-style: none;         /* Remove as bolinhas (bullets) */
+    padding: 0;               /* Remove o espaço interno padrão da lista */
+    margin: 0;                /* Remove margens padrão */
+    gap: 80px;                /* Cria o espaço entre as palavras */
+    justify-content: left;  /* Centraliza os itens no meio do quadrado */
+}
+
+.menu_dois{
+   margin-bottom: 20px;
+    width: 1000px;
+    height: 160px; /* Deixa a altura automática */
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 20px 40px; /* 20px em cima/baixo e 40px nas laterais */
+    display: block; /* Garante que a seção se comporte como um bloco comum */
+}
+    
+
+.destaque {
+    border-left: 6px solid #333; /* A barra: largura, estilo e cor */
+    background-color: #f1f1f1;   /* O fundo cinza clarinho */
+    padding: 15px 20px;          /* Espaço interno para o texto não grudar na barra */
+    margin: 10px 0;              /* Espaço fora para separar dos outros textos */
+}
+
+
+/* Isso faz a caixa se ajustar ao conteúdo e centralizar o texto internamente */
+.menu_tres {
+    margin-bottom: 20px;
+    width: 1000px;
+    height: 200px; /* Deixa a altura automática */
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 20px 40px; /* 20px em cima/baixo e 40px nas laterais */
+    display: block; /* Garante que a seção se comporte como um bloco comum */
+}
+
+/* Isso força os itens a ficarem um embaixo do outro com as bolinhas */
+.menu_tres ul, .menu_tres ol {
+    display: block; 
+    margin: 15px 0;
+    padding-left: 20px; /* Cria espaço para as bolinhas/números aparecerem */
+}
+
+.menu_tres li {
+    display: list-item; /* Comportamento padrão de lista (em pé) */
+    text-align: left;
+    margin-bottom: 8px; /* Espacinho entre os itens */
+}
+
+.menu_quatro{
+    margin-bottom: 20px;
+    width: 1000px;
+    height: 290px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 20px 40px; 
+    display: block; 
+}
+
+.menu_quatro label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.menu_quatro input {
+    width: 100%;       
+    padding: 10px;      
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.menu_quatro input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: block; 
+    margin-top: 10px;
+    width: 90px;
+}
+
+.menu_senac{
+    margin-bottom: 20px;
+    width: 1000px;
+    height: 90px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 20px 40px; 
+    display: block; 
+    text-align: center ;
+}
