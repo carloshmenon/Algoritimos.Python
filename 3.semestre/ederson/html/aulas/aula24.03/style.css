@@ -1,0 +1,8 @@
+h1{
+    display: flex;
+    justify-self: flex-end;
+    height: 500px;
+    width: 300px;
+    background-color: blue;
+    display: inline;
+}
