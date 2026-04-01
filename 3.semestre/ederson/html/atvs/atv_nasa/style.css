@@ -1,58 +1,104 @@
-*{
+/* Configurações gerais */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.navbar {
-    display: flex;                   /* Ativa o Flexbox */
-    justify-content: space-evenly;  /* Joga a logo pra esquerda e o menu pra direita */
-    align-items: center;             /* Alinha verticalmente no centro */
-    padding: 20px 5%;
-    background-color: #000000;
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-li{
+/* div que segura tudo no centro */
+.principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.imagem_logo {
+    width: 60px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
     color: white;
 }
 
-.imagem_logo{
-    width: 3%;
-    height: 30%;
-}
 
-body {
-    background-color: black; /* Define o fundo como preto */
-    margin: 0;               /* Remove as margens padrão do navegador */
-    color: white;            /* Garante que o texto fique branco para ser lido */
-}
-
-.texth1{
+.contador {
     display: flex;
-    justify-content:center;
-    background-color: black;
-    font-size: 30px;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-.elementos3{
-    display:flex;
-    justify-content: space-evenly;
+
+.elementos3 {
+    display: flex;
     
+    align-items: flex-start;
+    gap: 195px;
+    padding: 40px 0;
 }
 
-p{
-    font-size: 30px;
-    max-width: 600px;
-    margin-bottom: 25px;
+.elementos3 p {
+    margin-left: 0;      /* Remove recuos externos indesejados */
+    padding-left: 0px;  /* Adiciona um pequeno respiro à esquerda do texto */
+    flex: 1;  
+    font-size: 15px;           /* Permite que o texto cresça e ocupe o espaço disponível */
 }
 
-.IMAGEM3{
-    width: 40%;
-    height: 30%;
+.IMAGEM3 {
+    width: 75%; /* Tamanho do print do vídeo */
+    height: 40%;
 }
 
-.onde_assitir{
-    display: block;
-    width: 100vw;
-    height: 100vh;
+.textScroll {
+    width: 40%; /* Tamanho do print da timeline */
+    height: 10%;
+}
+
+/* Seção de Notícias (Os 3 prints lado a lado) */
+.noticias {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.noticias img {
+    width: 50%; /* Divide a linha em 3 partes iguais */
+    height: 550px; /* todas a terem a mesma altura */
+     /* Corta as bordas dos prints para não amassar a imagem */
+}
+
+.container-texto {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* (IMAGEM4) */
+.IMAGEM4 {
+    width: 140%;
+    height: 550px;
+    margin: 40px 0;
+}
+
+/* Título Astronautas */
+.conhecaP h1 {
+    text-align: left;
+    margin-bottom: 20px;
 }
