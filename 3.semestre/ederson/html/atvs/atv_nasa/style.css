@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;                   /* Ativa o Flexbox */
+    justify-content: space-evenly;  /* Joga a logo pra esquerda e o menu pra direita */
+    align-items: center;             /* Alinha verticalmente no centro */
+    padding: 20px 5%;
+    background-color: #000000;
+}
+
+li{
+    color: white;
+}
+
+.imagem_logo{
+    width: 3%;
+    height: 30%;
+}
+
+body {
+    background-color: black; /* Define o fundo como preto */
+    margin: 0;               /* Remove as margens padrão do navegador */
+    color: white;            /* Garante que o texto fique branco para ser lido */
+}
+
+.texth1{
+    display: flex;
+    justify-content:center;
+    background-color: black;
+    font-size: 30px;
+}
+
+.elementos3{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+
+p{
+    font-size: 30px;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.IMAGEM3{
+    width: 40%;
+    height: 30%;
+}
+
+.onde_assitir{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
