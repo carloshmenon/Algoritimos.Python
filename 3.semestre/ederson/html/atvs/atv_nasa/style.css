@@ -102,3 +102,27 @@ body {
     text-align: left;
     margin-bottom: 20px;
 }
+
+.btn-saber-mais {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-saber-mais:hover {
+    background-color: #555;
+}
+
+/* Estilo para a seção de texto da nova página */
+.conteudo-detalhado {
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
