@@ -15,7 +15,7 @@ cursor=conexao.cursor()
 
 cursor.execute("create database if not exists aula_connect")
 
-conexao.database="aula_connect"
+conexao.database="atv22_04"
 
 cursor.execute("show databases")
 #mostrar os bancos criados
@@ -39,6 +39,21 @@ cursor.execute("select * from alunos")
 resultados= cursor.fetchall()
 for linha in resultados:
     print(linha)
+
+##comando para editar
+sqlup = "UPDATE alunos SET nome = %s, idade = %s WHERE nome = %s" #aqui eu passo o parametro para mudar, novo nome, nova idade e antigo nome
+valoresup = ("carlos", 25,"tesmaCarlos")# aqui novo nome, nova idade e antigo nome 
+    
+cursor.execute(sqlup, valoresup)
+conexao.commit()
+
+#delete
+
+sqldel="DELETE from alunos WHERE id= %s"
+valoresdel=(6,)
+
+cursor.execute(sqldel, valoresdel)
+conexao.commit
 
 #fechar cursor e conexao
 
