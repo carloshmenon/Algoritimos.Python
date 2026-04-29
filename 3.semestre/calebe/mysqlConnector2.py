@@ -53,4 +53,6 @@ def put_aluno():
     cursor.close()
     conexao.close()
 
+
 #put_aluno()
+
