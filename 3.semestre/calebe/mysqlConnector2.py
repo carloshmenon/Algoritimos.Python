@@ -1,18 +1,15 @@
 #continuacao da aula 22-04
-
+#continuacao aula 30-04
 import mysql.connector
 
-#criar conexao
+from db import conectar
+#transformar em api flask
 
-def conectar():
-    conexao =mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="atv22_04"
-    )
+from flask import Flask, request, jsonify
 
-    return conexao
+app=Flask(__name__)
+
+@app.route("/alunos", methods = ["GET"])
 
 def get_alunos():
     conexao= conectar()
@@ -21,11 +18,18 @@ def get_alunos():
     cursor.execute("select * from alunos")
     dados=cursor.fetchall()
 
+    alunos=[] #aqui abrimos uma lista para realizar um append
     for aluno in dados:
-        print(f"ID:{aluno[0]}| Nome: {aluno[1]} | Idade: {aluno[2]}")
-
+        alunos.append({
+                "id": aluno[0],
+                "nome": aluno[1],
+                "idade": aluno [2]
+        })
+    
     cursor.close()
     conexao.close()
+
+    return jsonify(alunos)
 
 #get_alunos()
 
@@ -55,4 +59,7 @@ def put_aluno():
 
 
 #put_aluno()
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
