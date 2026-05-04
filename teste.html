@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital São Julião</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <div class="pai">
+        <!-- Aside -->
+        <div class="filho1">
+            aqui onde vai ser importado o asside por php quando estiver pronto.
+        </div>
+
+        <div class="filho2">
+            <!-- Header -->
+            <div class="neto1">
+                aqui onde vai ser importado o header por php quando estiver pronto
+            </div>
+
+            <div class="neto2">
+                <main>
+                    <section class="main-content">
+                        <!-- Navegação de Abas -->
+                        <nav class="menu_pagina-1">
+                            <a href="#" class="aba-1">Pavilhôes</a>
+                            <a href="#" class="aba-1">Quartos</a>
+                            <a href="#" class="aba-1">Leitos</a>
+                        </nav>
+
+                        <!-- Cabeçalho da Seção -->
+                        <div class="container-menu-cadastro-pavilhao">
+                            <div>
+                                <h1 class="titulo-pagina">Registro de Pavilhões</h1>
+                                <p class="sub_titulo">Preencha as informações abaixo.</p>
+                            </div> 
+                            <div>
+                                <button class="novo-usuario-button-visualizacao-do-pavilhao">
+                                    <p class="texto-novo-usuario-button-visualizacao-do-pavilhao">+ Novo Pavilhão</p>
+                                </button>
+                            </div>
+                        </div>                     
+
+                        <!-- Grid de Dados -->
+                        <div class="container-principal-cadastro-pavilhao">
+                            
+                            <!-- Cabeçalho da Tabela (Labels) -->
+                            <div class="subcontainer-cadastro-pavilhao header-lista">
+                                <div class="col-cod">Cod. Pavilhão</div>
+                                <div class="col-nome">Nome Pavilhão</div>
+                                <div class="col-qnt">Qntd. Leitos</div>
+                                <div class="col-acoes">Ações</div>
+                            </div>
+
+                            <!-- Linha de Registro 01 -->
+                            <div class="subcontainer-cadastro-pavilhao">
+                                <div class="col-cod">01</div>
+                                <div class="col-nome">Pavilhão 01</div>
+                                <div class="col-qnt">120</div>
+                                <div class="col-acoes">
+                                    <button class="btn-edit" title="Editar">✏️</button>
+                                    <button class="btn-delete" title="Excluir">🗑️</button>
+                                </div>
+                            </div>
+
+                            <!-- Você pode replicar a div acima para novos registros -->
+
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
