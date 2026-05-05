@@ -1,0 +1,69 @@
+/* Container pai do menu */
+.sub-header-tabs {
+    width: 100%;
+    background-color: white; /* Cor de fundo branca */
+    border-bottom: 2px solid #ccc; /* Linha horizontal cinza por baixo de tudo */
+    display: flex;
+    justify-content: center; /* CENTRALIZA O MENU INTEIRO HORIZONTALMENTE */
+}
+
+/* O elemento de lista em si */
+.sub-header-tabs ul {
+    display: flex; /* Alinha os itens da lista em linha */
+    list-style: none; /* Remove os pontos da lista */
+    padding: 0;
+    margin: 0;
+    max-width: 800px; /* Largura máxima opcional para o menu não esticar demais */
+    width: 100%; /* Garante que os itens se distribuam */
+}
+
+/* Cada item do menu (li) */
+.sub-header-tabs li {
+    flex: 1; /* Distribui o espaço igualmente entre os itens (Pavilhões, Quartos, Leitos) */
+    text-align: center; /* Centraliza o texto dentro de cada li */
+    position: relative; /* Necessário para a linha divisória vertical */
+}
+
+/* Os links dentro dos itens (a) */
+.sub-header-tabs a {
+    display: block; /* O link ocupa toda a área do item para facilitar o clique */
+    padding: 15px 0; /* Espaçamento vertical para dar altura ao menu */
+    text-decoration: none; /* Remove o sublinhado azul padrão */
+    color: #666; /* Cor cinza padrão do texto */
+    font-weight: normal;
+    transition: color 0.2s ease; /* Transição suave na cor ao passar o mouse */
+}
+
+/* Estilo do link na aba ATIVA (ex: Pavilhões) */
+.sub-header-tabs a.active {
+    color: #009688; /* Cor turquesa do texto na aba ativa */
+    font-weight: bold;
+}
+
+/* A LINHA TURQUESA EMBAIXO DA ABA ATIVA */
+.sub-header-tabs a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Posiciona exatamente sobre a linha cinza do container */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Espessura da linha colorida */
+    background-color: #009688; /* Mesma cor turquesa */
+}
+
+/* AS LINHAS DIVISÓRIAS VERTICAIS (Divisórias pontilhadas/leves entre os itens) */
+.sub-header-tabs li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    height: 70%; /* Altura da linha em relação ao item */
+    width: 1px;
+    background-color: #ddd; /* Cor cinza bem clara para a divisória */
+}
+
+/* Efeito Hover (opcional, para quando passar o mouse) */
+.sub-header-tabs a:not(.active):hover {
+    color: #00796b; /* Cor ligeiramente diferente no hover */
+}
