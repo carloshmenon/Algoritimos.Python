@@ -1,32 +1,32 @@
 import mysql.connector 
 from db import conectar
 #transformar em api flask
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, redirect
 
 app = Flask(__name__)
 
 
-@app.route("/alunos", methods = ["GET"])
-def get_alunos():
+@app.route("/")
+def home():
     conexao = conectar()
     cursor = conexao.cursor()
 
     cursor.execute("select * from alunos")
-    dados = cursor.fetchall()
+    alunos = cursor.fetchall()
 
-    alunos = []
-    for aluno in dados:
-        alunos.append({
-                "id": aluno[0],
-                "nome": aluno[1],
-                "idade": aluno[2]
-            })
+   # alunos = []
+   # for aluno in dados:
+    #    alunos.append({
+     #           "id": aluno[0],
+      #          "nome": aluno[1],
+       #         "idade": aluno[2]
+        #    })
         #print(f"ID: {aluno[0]} | Nome: {aluno[1]} | Idade: {aluno[2]}")
     
     cursor.close()
     conexao.close()
 
-    return jsonify(alunos)
+    return render_template ("aula.html", alunos=alunos)
 
 #get_alunos()
 
@@ -83,42 +83,36 @@ def delete_aluno():
     conexao.close()
 
 
+
+@app.route("/deletar")
+def delete_alunos(id):
+    conexao=conectar()
+    cursor=conexao.cursor()
+
+    
+    cursor.execute("DELETE from aluno WHERE id=%s", (id))
+    conexao.commit()
+    
+    cursor.close()
+    conexao.close()
+    
+    return  redirect("/")
+
+@app.route("/cadastrar", methods=["POST"])
+def cadastrar():
+    nome=request.form["nome"]
+    idade=request.form["idade"]
+    conexao=conectar()
+    cursor=conexao.cursor()
+
+    sql="insert into alunos(nome, idade) values (%s, %s)"
+    cursor.execute(sql, (nome,idade))
+    conexao.commit()
+    
+    cursor.close()
+    conexao.close()
+    
+    return  redirect("/")
+
 if __name__ == "__main__":
     app.run(debug=True)
-
-@app.route("/alunos/<int:id>", methods=["DELETE"])
-def delete_alunos(id):
-    dados=request.json
-    id=dados["id"]
-    
-    conexao=conectar()
-    cursor=conexao.cursor()
-
-    sql="DELETE from aluno WHERE id=%s"
-    cursor.execute(sql, (id))
-    conexao.commit()
-    
-    cursor.close()
-    conexao.close()
-    
-    return  jsonify({"mensagem": "Aluno atualizado"})
-
-@app.route("/alunos/", methods=["POST"])
-
-def POST_alunos(nome, idade,id):
-    dados=request.json
-    nome=dados["nome"]
-    idade=dados["idade"]
-    id=dados["id"]
-    
-    conexao=conectar()
-    cursor=conexao.cursor()
-
-    sql="insert into alunos(nome, idade,id) values (%s, %s,%s)",(input("Digite o nome: "), int(input("Digite a idade: ")), int(input("Digite id: ")))
-    cursor.execute(sql, (nome,idade,id))
-    conexao.commit()
-    
-    cursor.close()
-    conexao.close()
-    
-    return  jsonify({"mensagem": "Aluno atualizado"})
