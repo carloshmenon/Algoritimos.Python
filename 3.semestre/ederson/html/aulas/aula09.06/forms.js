@@ -8,11 +8,17 @@ function nameValidate(){
 
     else{
         removeError(0);}
+    }
+    
     
     function removeError(index){
-        spans[index].style.display="none";}
+        spans[index].style.display="none";
+        console.log ("tudo certo")
+    }
 
-}
+    function setError (index){
+        spans[index].style.display="block";
+    }
 
 // para multiplos elementos com uma classe, podemos utilizar document.querySlecetorALL()
 // e document.getElementsByClassName(). para selecionar apenas um unico
