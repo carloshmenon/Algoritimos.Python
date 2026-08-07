@@ -2,10 +2,12 @@
 <?php
 
 $nome = "carlos";
-$idade = "10";
+$idade = "";
 
 if (isset($nome,$idade)) {
     echo "a variavel existe.";
+} else {
+    echo "nao existe";
 }
 
 ?>
