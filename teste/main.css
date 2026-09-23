@@ -1,0 +1,84 @@
+/* ANTES (apagar este bloco inteiro do main.css) */
+/* Lista de usuários: menos padding lateral; main + card ocupam a altura útil sob a topbar */
+.container-main:has(.container-principal-visualizacao-do-usuario) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.main-content:has(.container-principal-visualizacao-do-usuario) {
+    padding-left: clamp(0.75rem, 2vw, 1.375rem);
+    padding-right: clamp(0.75rem, 2vw, 1.375rem);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* CARD PRINCIPAL DA LISTAGEM */
+.container-principal-visualizacao-do-usuario { ... }
+
+/* HEADER */
+.subcontainer-1-visualizacao-do-usuario { ... }
+.search-box-visualizacao-do-usuario { ... }
+.search-box-visualizacao-do-usuario::placeholder { ... }
+.search-box-visualizacao-do-usuario:focus { ... }
+.novo-usuario-button-visualizacao-do-usuario { ... }
+.novo-usuario-button-visualizacao-do-usuario p { ... }
+
+/* CONTEÚDO */
+.subcontainer-2-visualizacao-do-usuario { ... }
+.container-titulos-subcontainer-2-visualizacao-do-usuario { ... }
+.titulos-subcontainer-2-visualizacao-do-usuario,
+.dados-box-subcontainer-2-visualizacao-do-usuario { ... }
+.titulos-subcontainer-2-visualizacao-do-usuario { ... }
+.dados-box-subcontainer-2-visualizacao-do-usuario { ... }
+.titulo-subcontainer-2-visualizacao-do-usuario:nth-child(1..4) { ... }
+.titulo-subcontainer-2-visualizacao-do-usuario { ... }
+.nome-subcontainer-2-visualizacao-do-usuario,
+.cpf-subcontainer-2-visualizacao-do-usuario,
+.funcao-subcontainer-2-visualizacao-do-usuario { ... }
+.nome-subcontainer-2-visualizacao-do-usuario { ... }
+.container-acao-subcontainer-2-visualizacao-do-usuario { ... }
+.container-acao-subcontainer-2-visualizacao-do-usuario img { ... }
+.linha-divisao-visualizacao-do-usuario { ... }
+.container-dados-subcontainer-2-visualizacao-do-usuario { ... }
+
+
+/* ================================================================= */
+/* DEPOIS (colar isto no lugar) */
+
+/* Lista de usuários: página some sob a topbar, table-padrao cuida do resto do visual internamente */
+.container-main:has(.container-principal-usuarios-listagem) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.main-content:has(.container-principal-usuarios-listagem) {
+    padding-left: clamp(0.75rem, 2vw, 1.375rem);
+    padding-right: clamp(0.75rem, 2vw, 1.375rem);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* WRAPPER DA PÁGINA */
+/* Sem border/box-shadow aqui: o table-padrao já aplica isso
+   internamente no .table-body dele (via --card-border, --card-shadow,
+   --card-radius). Um card por fora criaria um card dentro do outro. */
+.container-principal-usuarios-listagem {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: clamp(0.875rem, 2vh, 1.25rem) 0;
+    box-sizing: border-box;
+}
+
+.container-principal-usuarios-listagem table-padrao {
+    width: 100%;
+    flex: 1;
+    display: block;
+}
