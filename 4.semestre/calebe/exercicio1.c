@@ -2,59 +2,45 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct {
-    char *dados;
-    int topo;
-    int cap;
-} Pilha;
-
-void empilhar(Pilha *p, char c) {
-    if (p->topo == p->cap) {
-        p->cap = p->cap * 2;
-        p->dados = realloc(p->dados, p->cap * sizeof(char));
-        printf("(realloc: capacidade agora %d)\n", p->cap);
-    }
-    p->dados[p->topo] = c;
-    p->topo++;
-}
-
-char desempilhar(Pilha *p) {
-    p->topo--;
-    return p->dados[p->topo];
-}
-
 int main() {
-    Pilha p;
-    p.cap = 4;
-    p.topo = 0;
-    p.dados = malloc(p.cap * sizeof(char));
-
+    int cap = 4;
+    int topo = 0;
+    char *pilha = malloc(cap);
     char msg[101];
-    char senha[101];
-    int i, n = 0;
 
     printf("Mensagem codificada: ");
     scanf("%100s", msg);
+    int tam = strlen(msg);
 
-    for (i = 0; msg[i] != '\0'; i++) {
-        empilhar(&p, msg[i]);
+    
+    for (int i = 0; i < tam; i++) {
+        if (topo == cap) {
+            cap *= 2;
+            pilha = realloc(pilha, cap);
+            printf("(realloc: capacidade agora %d)\n", cap);
+        }
+        pilha[topo++] = msg[i];
     }
 
+    
+    int igual = 1;
+    int pos = 0;
     printf("Senha decodificada: ");
-    while (p.topo > 0) {
-        senha[n] = desempilhar(&p);
-        printf("%c", senha[n]);
-        n++;
+    while (topo > 0) {
+        char letra = pilha[--topo];
+        printf("%c", letra);
+        if (letra != msg[pos]) {
+            igual = 0;
+        }
+        pos++;
     }
-    senha[n] = '\0';
     printf("\n");
 
-    if (strcmp(msg, senha) == 0) {
+    if (igual)
         printf("Senha espelhada!\n");
-    } else {
+    else
         printf("Senha nao espelhada.\n");
-    }
 
-    free(p.dados);
+    free(pilha);
     return 0;
 }
